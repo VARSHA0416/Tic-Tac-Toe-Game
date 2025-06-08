@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding-top: 40px;
+}
+
+h1 {
+  color: rgb(251, 244, 245);
+  text-size-adjust: 40px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #b57979, 0 0 10px #555186;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #333;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cell:hover {
+  background-color: #e0e0e0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+   border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #008CBA;
+  color: rgb(171, 119, 119);
+}
+
+button:hover {
+  background-color: #00bfff;
+  box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+  transform: scale(1.05);
+}
+.winning-cell {
+  background-color: #258025 !important; /* Light green */
+  animation: glow 0.5s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 5px #90ee90; }
+  to { box-shadow: 0 0 20px #90ee90; }
+}
+.losing-cell {
+  background-color: #6f0f0f !important; /* Light red */
+  color: white;
+  opacity: 0.9;
+}
+#toggle-music {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #118599;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-color: #0e0f0f; /* dark background */
+}
+#status.draw {
+  color: orange;
+  font-weight: bold;
+  animation: glowDraw 1s infinite alternate;
+}
+
+@keyframes glowDraw {
+  from { text-shadow: 0 0 5px orange; }
+  to { text-shadow: 0 0 20px orange; }
+}
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+
+  <div class="board" id="board">
+    <!-- 9 Cells -->
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+  </div>
+
+  <p id="status">Player X's turn</p>
+  <button onclick="resetGame()">Restart</button>
+
+  <button id="toggle-music" onclick="toggleMusic()">🎵 Mute Music</button>
+  <audio id="bg-music" src="background.mp3" loop autoplay></audio>
+
+ <!-- Particles background -->
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 80 },
+      "size": { "value": 3 },
+      "color": { "value": "#ffffff" },
+      "line_linked": { "enable": true, "opacity": 0.2 },
+      "move": { "speed": 1 }
+    },
+    "interactivity": {
+      "events": { "onhover": { "enable": true, "mode": "repulse" } }
+    }
+  });
+</script>
+
+  <script src="script.js"></script>
+ 
+
+</body>
+</html>
